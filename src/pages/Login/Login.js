@@ -10,11 +10,13 @@ import SocialLogin from './SocialLogin';
 const Login = () => {
     const [sendPasswordResetEmail, sending] = useSendPasswordResetEmail(auth);
     const navigate = useNavigate();
+
     const navigateforgatpass = async () => {
         const email = emailRef.current.value;
         await sendPasswordResetEmail(email);
         alert('sent email');
     }
+
 
     const emailRef = useRef('');
     const passwordRef = useRef('');

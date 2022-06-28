@@ -8,7 +8,7 @@ const Header = () => {
             <div class="container px-6 py-4 mx-auto md:flex md:justify-between md:items-center">
                 <div class="flex items-center justify-between">
                     <div>
-                        <a class="text-2xl font-bold  transition-colors duration-200 transform  lg:text-3xl text-violet-700 italic " href="#">HMF</a>
+                        <a class="text-2xl font-bold  transition-colors duration-200 transform  lg:text-3xl text-violet-700 italic " href="home">HMF</a>
                     </div>
 
 
@@ -26,8 +26,10 @@ const Header = () => {
                     <div class="flex flex-col md:flex-row md:mx-6">
                         <a href="home#Features" class="my-1 text-sm font-medium text-gray-700 transition-colors duration-200 transform  hover:text-violet-500  md:mx-4 md:my-0" >Features</a>
                         <a href="About" class="my-1 text-sm font-medium text-gray-700 transition-colors duration-200 transform  hover:text-violet-500  md:mx-4 md:my-0" >About</a>
+                        <a href="blogs" class="my-1 text-sm font-medium text-gray-700 transition-colors duration-200 transform  hover:text-violet-500  md:mx-4 md:my-0" >Blogs </a>
                         <a href="Login" class="my-1 text-sm font-medium text-gray-700 transition-colors duration-200 transform  hover:text-violet-500  md:mx-4 md:my-0" >Login </a>
                         <a href="signup" class="my-1 text-sm font-medium text-gray-700 transition-colors duration-200 transform  hover:text-violet-500  md:mx-4 md:my-0" >Sign Up</a>
+                        <a href="dashboard" class="my-1 text-sm font-medium text-gray-700 transition-colors duration-200 transform  hover:text-violet-500  md:mx-4 md:my-0" >Dashboard</a>
                     </div>
 
                     <div class="flex justify-center md:block">

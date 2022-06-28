@@ -2,7 +2,7 @@ import React from 'react';
 
 const Features = () => {
     return (
-        <div class="bg-white ">
+        <div class="bg-white " id='home#Features'>
             <div class="container px-6 py-10 mx-auto">
                 <h1 class="text-3xl font-semibold text-gray-800 capitalize lg:text-4xl ">explore our <br /> awesome <span class="underline decoration-violet-500">Home Made Foods</span></h1>
 

@@ -1,5 +1,5 @@
 import React from 'react';
-import { useNavigate } from 'react-router-dom';
+import { Navigate, useNavigate } from 'react-router-dom';
 import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import auth from '../../firebase.init';
 
@@ -13,7 +13,7 @@ const Signup = () => {
     ] = useCreateUserWithEmailAndPassword(auth);
     const navigate = useNavigate();
     const navigatelogin = () => {
-
+        navigate('/login');
     }
 
     if (user) {
@@ -70,7 +70,7 @@ const Signup = () => {
 
                     <div className="text-grey-dark mt-6">
                         Already have an account?
-                        <p className="cursor-pointer underline border-b border-violet text-violet">
+                        <p onClick={navigatelogin} className="cursor-pointer underline border-b border-violet text-violet">
                             Log in
                         </p>.
                     </div>
