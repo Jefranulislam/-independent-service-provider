@@ -1,7 +1,14 @@
 import React from 'react';
-import { Link, Router, Routes } from 'react-router-dom';
+import { signOut } from 'firebase/auth';
+import { useAuthState } from 'react-firebase-hooks/auth';
+import auth from '../../firebase.init';
 
 const Header = () => {
+    const [user] = useAuthState(auth);
+
+    const handleSignOut = () => {
+        signOut(auth);
+    }
     return (
 
         <nav class="bg-white shadow ">
@@ -27,8 +34,16 @@ const Header = () => {
                         <a href="home#Features" class="my-1 text-sm font-medium text-gray-700 transition-colors duration-200 transform  hover:text-violet-500  md:mx-4 md:my-0" >Features</a>
                         <a href="About" class="my-1 text-sm font-medium text-gray-700 transition-colors duration-200 transform  hover:text-violet-500  md:mx-4 md:my-0" >About</a>
                         <a href="blogs" class="my-1 text-sm font-medium text-gray-700 transition-colors duration-200 transform  hover:text-violet-500  md:mx-4 md:my-0" >Blogs </a>
-                        <a href="Login" class="my-1 text-sm font-medium text-gray-700 transition-colors duration-200 transform  hover:text-violet-500  md:mx-4 md:my-0" >Login </a>
-                        <a href="signup" class="my-1 text-sm font-medium text-gray-700 transition-colors duration-200 transform  hover:text-violet-500  md:mx-4 md:my-0" >Sign Up</a>
+                        {user ?
+                            <a onClick={handleSignOut} href="Login" class="my-1 text-sm font-medium text-gray-700 transition-colors duration-200 transform  hover:text-violet-500  md:mx-4 md:my-0" >Log Out </a>
+                            : <div>
+                                <a href="Login" class="my-1 text-sm font-medium text-gray-700 transition-colors duration-200 transform  hover:text-violet-500  md:mx-4 md:my-0" >Login </a>
+                                <a href="signup" class="my-1 text-sm font-medium text-gray-700 transition-colors duration-200 transform  hover:text-violet-500  md:mx-4 md:my-0" >Sign Up</a>
+                            </div>
+                        }
+
+
+
                         <a href="dashboard" class="my-1 text-sm font-medium text-gray-700 transition-colors duration-200 transform  hover:text-violet-500  md:mx-4 md:my-0" >Dashboard</a>
                     </div>
 

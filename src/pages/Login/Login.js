@@ -44,8 +44,6 @@ const Login = () => {
         const email = emailRef.current.value;
         const password = passwordRef.current.value;
         signInWithEmailAndPassword(email, password);
-        console.log(email, error);
-        alert('User Logged in');
     }
 
     return (
@@ -65,7 +63,7 @@ const Login = () => {
                         Password
                     </label>
                     <input ref={passwordRef} className="shadow appearance-none border border-red rounded w-full py-2 px-3 text-grey-darker mb-3" id="password" type="password" placeholder="******************"></input>
-                    <p className="text-red text-xs italic">Please write your password.</p>
+                    <p className="text-red text-xs italic">Please try to login google for better experience </p>
                 </div>
                 <div className="flex items-center justify-between">
                     <button className="bg-violet-500 hover:bg-violet-700 text-white font-bold py-2 px-4 rounded" type="submit">
