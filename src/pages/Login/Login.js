@@ -32,9 +32,7 @@ const Login = () => {
             </div>
         );
     }
-    if (user) {
-        navigate('About');
-    }
+
 
 
     const handleSubmit = event => {
