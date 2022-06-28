@@ -42,8 +42,6 @@ const Header = () => {
                             </div>
                         }
 
-
-
                         <a href="dashboard" class="my-1 text-sm font-medium text-gray-700 transition-colors duration-200 transform  hover:text-violet-500  md:mx-4 md:my-0" >Dashboard</a>
                     </div>
 
