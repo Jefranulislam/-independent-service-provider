@@ -2,14 +2,13 @@ import React from 'react';
 import { useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useSendPasswordResetEmail, useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
-
-
 import auth from '../../firebase.init';
 import SocialLogin from './SocialLogin';
 
 const Login = () => {
     const [sendPasswordResetEmail, sending] = useSendPasswordResetEmail(auth);
     const navigate = useNavigate();
+
 
     const navigateforgatpass = async () => {
         const email = emailRef.current.value;
@@ -33,9 +32,8 @@ const Login = () => {
             </div>
         );
     }
-
     if (user) {
-        console.log("User Logged in")
+        navigate('About');
     }
 
 

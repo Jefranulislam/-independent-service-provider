@@ -2,12 +2,18 @@ import React from 'react';
 import { signOut } from 'firebase/auth';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import auth from '../../firebase.init';
+import { useNavigate } from 'react-router-dom';
+
 
 const Header = () => {
     const [user] = useAuthState(auth);
 
     const handleSignOut = () => {
         signOut(auth);
+    }
+    const navigate = useNavigate('');
+    if (user) {
+        navigate('/home')
     }
     return (
 
